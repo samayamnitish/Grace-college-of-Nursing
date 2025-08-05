@@ -28,7 +28,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-16 bg-gray-50">
+    <section id="about" className="py-16 bg-muted/30">
       <div className="container mx-auto px-4">
         {/* Main About Section */}
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
@@ -88,7 +88,7 @@ const About = () => {
                 <h3 className="font-semibold text-lg mb-3 text-college-green">
                   {feature.title}
                 </h3>
-                <p className="text-gray-600 text-sm">
+                <p className="text-muted-foreground text-sm">
                   {feature.description}
                 </p>
               </CardContent>
@@ -104,10 +104,10 @@ const About = () => {
                 Founder's Desk
               </h3>
               <div className="mb-6">
-                <h4 className="text-xl font-semibold text-gray-800">Rev. Dr. S.S. John</h4>
-                <p className="text-gray-600">Bishop Apostolic Church</p>
+                <h4 className="text-xl font-semibold text-foreground">Rev. Dr. S.S. John</h4>
+                <p className="text-muted-foreground">Bishop Apostolic Church</p>
               </div>
-              <div className="text-gray-700 space-y-4 text-sm leading-relaxed">
+              <div className="text-card-foreground space-y-4 text-sm leading-relaxed">
                 <p>
                   The Apostolic Church (Pentecostal) under the able spiritual leadership of Rev. Dr. S.S. John, 
                   Bishop started Grace School of Nursing under the guidance of the Holy Spirit to impart training 
