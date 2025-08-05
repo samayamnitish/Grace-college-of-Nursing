@@ -7,6 +7,7 @@ import Testimonials from "@/components/Testimonials";
 import Admissions from "@/components/Admissions";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import FloatingActionButton from "@/components/FloatingActionButton";
 
 const Index = () => {
   return (
@@ -20,6 +21,7 @@ const Index = () => {
       <Admissions />
       <Contact />
       <Footer />
+      <FloatingActionButton />
     </div>
   );
 };
