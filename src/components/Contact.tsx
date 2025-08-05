@@ -34,7 +34,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold text-college-navy mb-2">Address</h4>
-                      <p className="text-gray-600">
+                      <p className="text-muted-foreground">
                         123 Education Street<br />
                         Medical District<br />
                         Healthcare City, State - 123456
@@ -52,7 +52,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold text-college-navy mb-2">Phone</h4>
-                      <p className="text-gray-600">
+                      <p className="text-muted-foreground">
                         <a href="tel:+1234567890" className="hover:text-college-green transition-smooth">
                           +1-234-567-8900
                         </a><br />
@@ -73,7 +73,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold text-college-navy mb-2">Email</h4>
-                      <p className="text-gray-600">
+                      <p className="text-muted-foreground">
                         <a href="mailto:info@gracecollege.edu" className="hover:text-college-green transition-smooth">
                           info@gracecollege.edu
                         </a><br />
@@ -94,7 +94,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold text-college-navy mb-2">Office Hours</h4>
-                      <p className="text-gray-600">
+                      <p className="text-muted-foreground">
                         Monday - Friday: 9:00 AM - 5:00 PM<br />
                         Saturday: 9:00 AM - 2:00 PM<br />
                         Sunday: Closed
@@ -113,7 +113,7 @@ const Contact = () => {
                 <CardTitle className="text-2xl text-college-navy">
                   Send us a Message
                 </CardTitle>
-                <p className="text-gray-600">
+                <p className="text-muted-foreground">
                   Fill out the form below and we'll get back to you within 24 hours.
                 </p>
               </CardHeader>
@@ -185,8 +185,8 @@ const Contact = () => {
         {/* Map Section */}
         <div className="mt-16">
           <Card className="shadow-card overflow-hidden">
-            <div className="bg-gray-200 h-64 flex items-center justify-center">
-              <div className="text-center text-gray-500">
+            <div className="bg-muted h-64 flex items-center justify-center">
+              <div className="text-center text-muted-foreground">
                 <MapPin className="w-12 h-12 mx-auto mb-4" />
                 <p className="text-lg font-medium">Interactive Map</p>
                 <p className="text-sm">Campus location and directions</p>

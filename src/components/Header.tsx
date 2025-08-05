@@ -34,7 +34,7 @@ const Header = () => {
       </div>
 
       {/* Main Header */}
-      <div className="bg-white shadow-md">
+      <div className="bg-background shadow-md border-b">{" "}
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             {/* Logo and College Info */}
@@ -45,16 +45,16 @@ const Header = () => {
                 className="w-16 h-16 object-contain"
               />
               <div className="text-left">
-                <div className="text-blue-600 font-bold text-lg sm:text-xl">
+                <div className="text-primary font-bold text-lg sm:text-xl">
                   SARA GRACE EDUCATIONAL SOCIETY
                 </div>
-                <div className="text-red-600 font-bold text-xl sm:text-3xl">
+                <div className="text-college-green font-bold text-xl sm:text-3xl">
                   GRACE COLLEGE OF NURSING
                 </div>
-                <div className="text-sm text-gray-600 max-w-lg">
+                <div className="text-sm text-muted-foreground max-w-lg">
                   Recognised by the Govt. of A.P, Andhra Pradesh Nursing Council and I.N.C, New Delhi.
                 </div>
-                <div className="text-sm text-gray-600 font-semibold">
+                <div className="text-sm text-muted-foreground font-semibold">
                   AFFILIATED TO: DR. N.T.R. UNIVERSITY OF HEALTH SCIENCES, A.P.
                 </div>
               </div>

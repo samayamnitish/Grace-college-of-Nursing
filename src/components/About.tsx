@@ -37,7 +37,7 @@ const About = () => {
             <h2 className="text-3xl lg:text-4xl font-bold text-college-green mb-6">
               About Nursing Career
             </h2>
-            <div className="prose max-w-none text-gray-700 space-y-4">
+            <div className="prose max-w-none text-foreground space-y-4">
               <p>
                 It is an important policy to provide good health care by all developing countries. 
                 Thus, it has become more impediments to provide health care to the public in our country. 
@@ -57,11 +57,11 @@ const About = () => {
           </div>
 
           {/* Right Content - College Info */}
-          <div className="bg-white p-8 rounded-lg shadow-lg">
+          <div className="bg-card p-8 rounded-lg shadow-lg">
             <h3 className="text-2xl font-bold text-college-green mb-6">
               NURSING - The Noblest Profession
             </h3>
-            <div className="text-gray-700 space-y-4">
+            <div className="text-card-foreground space-y-4">
               <p>
                 Every one desires to attain optimum health. The level of development of country is 
                 measured in terms of the health of the people. The achievement of the country in 
@@ -97,7 +97,7 @@ const About = () => {
         </div>
 
         {/* Founder Section */}
-        <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+        <div className="bg-card rounded-lg shadow-lg overflow-hidden">
           <div className="grid lg:grid-cols-2 gap-0">
             <div className="p-8 lg:p-12">
               <h3 className="text-2xl font-bold text-college-green mb-4">

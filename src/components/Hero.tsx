@@ -83,7 +83,7 @@ const Hero = () => {
 
           {/* Right Content - College Info Card */}
           <div className="flex justify-center lg:justify-end">
-            <Card className="bg-white/95 backdrop-blur-sm max-w-md w-full">
+            <Card className="bg-card/95 backdrop-blur-sm max-w-md w-full">
               <CardContent className="p-6">
                 <div className="text-center mb-4">
                   <img 
