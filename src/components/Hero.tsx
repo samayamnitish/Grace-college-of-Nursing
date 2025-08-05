@@ -87,7 +87,7 @@ const Hero = () => {
               <CardContent className="p-6">
                 <div className="text-center mb-4">
                   <img 
-                    src={collegeLogo} 
+                    src="/lovable-uploads/69a68ed6-ebea-433f-94ba-281d03dced1a.png" 
                     alt="Grace College Logo" 
                     className="w-20 h-20 mx-auto mb-3"
                   />
