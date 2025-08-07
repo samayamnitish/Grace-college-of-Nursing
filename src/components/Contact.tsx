@@ -35,9 +35,9 @@ const Contact = () => {
                     <div>
                       <h4 className="font-semibold text-college-navy mb-2">Address</h4>
                       <p className="text-muted-foreground">
-                        123 Education Street<br />
-                        Medical District<br />
-                        Healthcare City, State - 123456
+                        Door No: 3/39, Pothepalle<br />
+                        Machilipatnam, Krishna Dist.<br />
+                        Andhra Pradesh - 521 002
                       </p>
                     </div>
                   </div>
@@ -53,11 +53,11 @@ const Contact = () => {
                     <div>
                       <h4 className="font-semibold text-college-navy mb-2">Phone</h4>
                       <p className="text-muted-foreground">
-                        <a href="tel:+1234567890" className="hover:text-college-green transition-smooth">
-                          +1-234-567-8900
+                        <a href="tel:+918500254345" className="hover:text-college-green transition-smooth">
+                          +91-8500254345
                         </a><br />
-                        <a href="tel:+1234567891" className="hover:text-college-green transition-smooth">
-                          +1-234-567-8901
+                        <a href="tel:+919492644555" className="hover:text-college-green transition-smooth">
+                          +91-9492644555
                         </a>
                       </p>
                     </div>
@@ -74,11 +74,11 @@ const Contact = () => {
                     <div>
                       <h4 className="font-semibold text-college-navy mb-2">Email</h4>
                       <p className="text-muted-foreground">
-                        <a href="mailto:info@gracecollege.edu" className="hover:text-college-green transition-smooth">
-                          info@gracecollege.edu
+                        <a href="mailto:info@gracecollegenursing.com" className="hover:text-college-green transition-smooth">
+                          info@gracecollegenursing.com
                         </a><br />
-                        <a href="mailto:admissions@gracecollege.edu" className="hover:text-college-green transition-smooth">
-                          admissions@gracecollege.edu
+                        <a href="mailto:sges112@gmail.com" className="hover:text-college-green transition-smooth">
+                          sges112@gmail.com
                         </a>
                       </p>
                     </div>
