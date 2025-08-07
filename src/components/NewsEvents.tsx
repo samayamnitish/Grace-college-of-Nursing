@@ -55,13 +55,13 @@ const NewsEvents = () => {
   };
 
   return (
-    <section id="news" className="py-16 bg-gray-50">
+    <section id="news" className="py-16 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl lg:text-4xl font-bold text-college-green mb-4">
             News & Events
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <p className="text-muted-foreground max-w-2xl mx-auto">
             Stay updated with the latest news, events, and announcements from Grace College of Nursing
           </p>
         </div>
@@ -87,14 +87,14 @@ const NewsEvents = () => {
                     </CardTitle>
                   </div>
                 </div>
-                <div className="flex items-center gap-2 text-sm text-gray-500">
+                <div className="flex items-center gap-2 text-sm text-muted-foreground">
                   <Calendar className="w-4 h-4" />
                   <span>{formatDate(item.date)}</span>
                 </div>
               </CardHeader>
               
               <CardContent>
-                <p className="text-gray-600 text-sm mb-4 line-clamp-3">
+                <p className="text-muted-foreground text-sm mb-4 line-clamp-3">
                   {item.description}
                 </p>
                 <Button variant="outline" size="sm" className="group">

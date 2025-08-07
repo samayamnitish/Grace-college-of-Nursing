@@ -76,13 +76,13 @@ const Testimonials = () => {
   const current = testimonials[currentTestimonial];
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl lg:text-4xl font-bold text-college-green mb-4">
             Testimonials
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <p className="text-muted-foreground max-w-2xl mx-auto">
             Hear from our successful alumni who are making a difference in the healthcare industry
           </p>
         </div>
@@ -96,7 +96,7 @@ const Testimonials = () => {
                 
                 {/* Testimonial Content */}
                 <div className="relative z-10">
-                  <blockquote className="text-lg lg:text-xl text-gray-700 leading-relaxed mb-8 italic">
+                  <blockquote className="text-lg lg:text-xl text-foreground leading-relaxed mb-8 italic">
                     "{current.content}"
                   </blockquote>
                   
@@ -107,10 +107,10 @@ const Testimonials = () => {
                         <h4 className="text-xl font-bold text-college-green mb-1">
                           {current.name}
                         </h4>
-                        <p className="text-gray-600 text-sm mb-2">
+                        <p className="text-muted-foreground text-sm mb-2">
                           {current.parentage}
                         </p>
-                        <div className="flex items-center gap-1 text-sm text-gray-500 mb-2">
+                        <div className="flex items-center gap-1 text-sm text-muted-foreground mb-2">
                           <MapPin className="w-4 h-4" />
                           <span>{current.location}</span>
                         </div>
@@ -118,7 +118,7 @@ const Testimonials = () => {
                           <span className="text-college-green font-medium">
                             Batch: {current.batch}
                           </span>
-                          <span className="text-gray-600">
+                          <span className="text-muted-foreground">
                             Currently: {current.currentPosition}
                           </span>
                         </div>
@@ -149,7 +149,7 @@ const Testimonials = () => {
                   className={`w-3 h-3 rounded-full transition-all ${
                     index === currentTestimonial 
                       ? "bg-college-green" 
-                      : "bg-gray-300 hover:bg-gray-400"
+                      : "bg-muted hover:bg-muted/80"
                   }`}
                 />
               ))}
@@ -169,19 +169,19 @@ const Testimonials = () => {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-12 pt-12 border-t">
             <div className="text-center">
               <div className="text-3xl font-bold text-college-green mb-2">21+</div>
-              <div className="text-gray-600 text-sm">Batches Graduated</div>
+              <div className="text-muted-foreground text-sm">Batches Graduated</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-college-green mb-2">1000+</div>
-              <div className="text-gray-600 text-sm">Alumni Worldwide</div>
+              <div className="text-muted-foreground text-sm">Alumni Worldwide</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-college-green mb-2">95%</div>
-              <div className="text-gray-600 text-sm">Placement Rate</div>
+              <div className="text-muted-foreground text-sm">Placement Rate</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-college-green mb-2">35+</div>
-              <div className="text-gray-600 text-sm">Years Experience</div>
+              <div className="text-muted-foreground text-sm">Years Experience</div>
             </div>
           </div>
         </div>
