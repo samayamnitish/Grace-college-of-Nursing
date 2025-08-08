@@ -40,7 +40,7 @@ const Header = () => {
             {/* Logo and College Info */}
             <div className="flex items-center gap-4">
               <img 
-                src="/lovable-uploads/69a68ed6-ebea-433f-94ba-281d03dced1a.png" 
+                src="/lovable-uploads/21d76668-fb6b-4652-a7d3-8f378b075733.png" 
                 alt="Grace College Logo" 
                 className="w-16 h-16 object-contain"
               />
