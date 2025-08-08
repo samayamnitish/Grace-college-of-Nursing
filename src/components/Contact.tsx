@@ -178,7 +178,7 @@ const Contact = () => {
                     className="w-full"
                     onClick={() => {
                       const message = `Hello! I'm interested in your nursing programs. Please contact me.`;
-                      window.open(`https://wa.me/919492644555?text=${encodeURIComponent(message)}`, '_blank');
+                      window.open(`https://wa.me/918500254345?text=${encodeURIComponent(message)}`, '_blank');
                     }}
                   >
                     <Send className="w-4 h-4 mr-2" />
