@@ -59,7 +59,7 @@ const Footer = () => {
             {/* College Info */}
             <div className="lg:col-span-1">
               <div className="flex items-center gap-4 mb-6">
-                <img src={collegeLogo} alt="Grace College Logo" className="w-12 h-12" />
+                <img src="/lovable-uploads/5c067fa4-0b27-4771-884a-a041dfdd3aa0.png" alt="Grace College Logo" className="w-12 h-12" />
                 <div>
                   <h3 className="text-xl font-bold">Grace College</h3>
                   <p className="text-sm text-gray-300">of Nursing</p>
@@ -143,17 +143,17 @@ const Footer = () => {
                 <div className="flex items-start gap-3">
                   <MapPin className="w-5 h-5 text-college-gold mt-1 flex-shrink-0" />
                   <div className="text-gray-300">
-                    <p>123 Education Street</p>
-                    <p>Medical District</p>
-                    <p>Healthcare City, State - 123456</p>
+                    <p>Door No: 3/39, Pothepalle</p>
+                    <p>Machilipatnam, Krishna Dist.</p>
+                    <p>Andhra Pradesh - 521 002</p>
                   </div>
                 </div>
                 
                 <div className="flex items-center gap-3">
                   <Phone className="w-5 h-5 text-college-gold flex-shrink-0" />
                   <div className="text-gray-300">
-                    <a href="tel:+1234567890" className="hover:text-college-gold transition-smooth">
-                      +1-234-567-8900
+                    <a href="tel:+918500254345" className="hover:text-college-gold transition-smooth">
+                      +91-8500254345
                     </a>
                   </div>
                 </div>
@@ -161,8 +161,8 @@ const Footer = () => {
                 <div className="flex items-center gap-3">
                   <Mail className="w-5 h-5 text-college-gold flex-shrink-0" />
                   <div className="text-gray-300">
-                    <a href="mailto:info@gracecollege.edu" className="hover:text-college-gold transition-smooth">
-                      info@gracecollege.edu
+                    <a href="mailto:info@gracecollegenursing.com" className="hover:text-college-gold transition-smooth">
+                      info@gracecollegenursing.com
                     </a>
                   </div>
                 </div>
