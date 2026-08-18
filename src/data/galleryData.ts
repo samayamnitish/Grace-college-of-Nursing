@@ -58,7 +58,7 @@ export const allGalleryPhotos: GalleryPhoto[] = [
   { id: 52, src: "/images/gallery/VFS_9324.JPG" },
   { id: 53, src: "/images/gallery/VFS_9354.JPG" },
   { id: 54, src: "/images/gallery/WhatsApp_Image_2026-03-18_at_2.24.13_PM.jpeg" },
-  { id: 55, src: "/images/gallery/john_sir_002.jpg" },
+  { id: 55, src: "/images/gallery/founder.jpg" },
   { id: 56, src: "/images/gallery/anatomy_lab.png" },
   { id: 57, src: "/images/gallery/campus_life_1.jpg" },
   { id: 58, src: "/images/gallery/campus_life_2.jpg" },
