@@ -218,36 +218,44 @@ export default function AboutPage() {
             </div>
           </section>
 
-          {/* Subsection 3: Founder & Leadership */}
+          {/* Subsection 3: Founder's Message & Leadership */}
           <section id="founder" className="bg-gradient-to-br from-nursing-navy via-[#0d3156] to-nursing-green text-white rounded-3xl overflow-hidden shadow-2xl">
             <div className="grid lg:grid-cols-12 gap-0 items-center">
               <div className="lg:col-span-7 p-8 sm:p-12 space-y-5">
                 <Badge className="bg-college-gold text-black font-extrabold text-xs uppercase tracking-wider px-3.5 py-1 rounded-full">
-                  About the Founder
+                  Founder's Message &amp; Vision
                 </Badge>
                 <h2 className="text-3xl sm:text-4xl font-black text-white font-heading tracking-tight">
-                  Rev. Dr. S.S. John
+                  Bishop Rev. Dr. S.S. John
                 </h2>
                 <div className="text-college-gold text-sm font-bold uppercase tracking-wider">
-                  Founder &amp; Spiritual Leader • Bishop, The Apostolic Church (Pentecostal)
+                  Founder &amp; Spiritual Leader • The Apostolic Church (Pentecostal)
+                </div>
+
+                <div className="p-4 rounded-2xl bg-white/10 border border-white/15 text-slate-100 text-xs sm:text-sm leading-relaxed font-medium italic">
+                  "Nursing is both a profession and an art. It requires knowledge, technical skills, compassion, dedication, and a caring approach toward patients. For career-minded students, nursing offers a unique combination of professional growth and service to humanity."
                 </div>
 
                 <div className="text-slate-200 text-xs sm:text-sm leading-relaxed space-y-3 font-medium">
                   <p>
-                    The Apostolic Church (Pentecostal), under the spiritual leadership of Rev. Dr. S.S. John, Bishop, started Grace School of Nursing to provide training in General Nursing and Midwifery.
+                    The Apostolic Church (Pentecostal), under the spiritual leadership of <strong>Bishop Rev. Dr. S.S. John</strong>, established Grace School &amp; College of Nursing to provide exceptional collegiate training in nursing and health sciences.
                   </p>
                   <p>
-                    The institution began its nursing education journey in <strong>1988</strong>. Over the years, students from different parts of India have undergone training at the institution, including students from <strong>Kerala, Andaman Islands, Madhya Pradesh, Tamil Nadu, Maharashtra, Delhi, Rajasthan</strong>, and other regions.
+                    Since our founding, students from across India—including <strong>Kerala, Andaman &amp; Nicobar Islands, Madhya Pradesh, Tamil Nadu, Maharashtra, Delhi, Rajasthan</strong>, and Andhra Pradesh—have graduated to become compassionate leaders in hospitals worldwide.
                   </p>
                 </div>
               </div>
 
-              <div className="lg:col-span-5 relative h-80 lg:h-full min-h-[360px] bg-slate-900">
+              <div className="lg:col-span-5 relative h-96 lg:h-full min-h-[400px] bg-slate-900 overflow-hidden flex items-center justify-center">
                 <img
                   src={founderImage}
-                  alt="Rev. Dr. S.S. John"
+                  alt="Bishop Rev. Dr. S.S. John"
                   className="w-full h-full object-cover object-top filter contrast-105"
                 />
+                <div className="absolute bottom-4 left-4 right-4 bg-black/60 backdrop-blur-md p-3 rounded-xl border border-white/20 text-center">
+                  <div className="text-xs font-bold text-white">Bishop Rev. Dr. S.S. John</div>
+                  <div className="text-[10px] text-college-gold font-semibold">Founder, Sara Grace Educational Society</div>
+                </div>
               </div>
             </div>
           </section>

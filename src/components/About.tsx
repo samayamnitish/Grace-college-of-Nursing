@@ -70,20 +70,36 @@ export default function About() {
             </div>
           </div>
 
-          {/* Right Highlights Card */}
-          <div className="lg:col-span-5 bg-card p-8 sm:p-10 rounded-3xl shadow-xl border border-border relative overflow-hidden space-y-4">
-            <div className="w-12 h-12 rounded-2xl bg-nursing-green/10 text-nursing-green flex items-center justify-center">
-              <Award className="w-6 h-6" />
+          {/* Right Highlights & Founder Message Card */}
+          <div className="lg:col-span-5 bg-gradient-to-br from-nursing-navy via-[#0d3156] to-nursing-green text-white p-8 sm:p-10 rounded-3xl shadow-xl relative overflow-hidden space-y-5">
+            <div className="flex items-center gap-4 border-b border-white/15 pb-5">
+              <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl overflow-hidden border-2 border-college-gold shrink-0 shadow-lg bg-slate-800">
+                <img
+                  src={founderImage}
+                  alt="Bishop Rev. Dr. S.S. John"
+                  className="w-full h-full object-cover object-top"
+                />
+              </div>
+              <div className="space-y-1">
+                <Badge className="bg-college-gold text-black font-extrabold text-[10px] uppercase tracking-wider px-2.5 py-0.5 rounded-full">
+                  Founder's Message
+                </Badge>
+                <h3 className="text-xl font-black text-white font-heading">
+                  Rev. Dr. S.S. John
+                </h3>
+                <p className="text-xs text-college-gold font-semibold">
+                  Founder &amp; Spiritual Leader
+                </p>
+              </div>
             </div>
-            <h3 className="text-2xl font-bold text-nursing-navy font-heading">
-              Symbol of Service
-            </h3>
-            <p className="text-muted-foreground text-sm leading-relaxed font-medium">
-              Nursing is an art requiring a compassionate and caring hand, combining profound service to humanity with high professional achievement. Our graduates serve across leading government general hospitals and premier healthcare networks worldwide.
+
+            <p className="text-slate-200 text-xs sm:text-sm leading-relaxed font-medium italic">
+              "Nursing is a sacred calling that blends healthcare science with unconditional human compassion. Our mission is to prepare nurses who serve communities with clinical excellence and moral courage."
             </p>
-            <div className="pt-2 border-t border-border flex items-center justify-between text-xs font-bold text-nursing-green">
-              <span>Dr. N.T.R. UHS Affiliation</span>
-              <span>INC New Delhi</span>
+
+            <div className="pt-2 border-t border-white/15 flex items-center justify-between text-xs font-bold text-college-gold">
+              <span>Dr. N.T.R. UHS Affiliated</span>
+              <span>INC New Delhi Approved</span>
             </div>
           </div>
         </div>
