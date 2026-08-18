@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 
 const slides = [
   {
-    src: "/lovable-uploads/admissions-2026-poster.jpg",
+    src: "/images/admissions_2026_poster.jpg",
     title: "Admissions Open — 2026-27 Batch",
     caption: "4-Year B.Sc. Nursing Degree Program affiliated to Dr. N.T.R. UHS",
   },
@@ -20,12 +20,12 @@ const slides = [
     caption: "Anatomy, Nutrition, Community Health & Nursing Foundations Labs",
   },
   {
-    src: "/lovable-uploads/certificate-event.jpg",
+    src: "/images/certificate_event.jpg",
     title: "Academic Convocation & Honors",
     caption: "Distinguished certificate distribution by Society Leadership",
   },
   {
-    src: "/lovable-uploads/relieving-ceremony.jpg",
+    src: "/images/relieving_ceremony.jpg",
     title: "Relieving Ceremonies & Celebrations",
     caption: "Celebrating batches of empowered healthcare leaders",
   },

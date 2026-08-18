@@ -103,7 +103,7 @@ export default function Header() {
               {/* Logo — Left */}
               <Link to="/" className="flex items-center gap-3 group shrink-0">
                 <img
-                  src="/lovable-uploads/5c067fa4-0b27-4771-884a-a041dfdd3aa0.png"
+                  src="/images/college_logo.png"
                   alt="Grace College of Nursing Logo"
                   className="w-10 h-10 lg:w-12 lg:h-12 object-contain transition-transform group-hover:scale-105"
                 />

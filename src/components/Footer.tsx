@@ -15,7 +15,7 @@ export default function Footer() {
           <div className="lg:col-span-4 space-y-4">
             <div className="flex items-center gap-3">
               <img
-                src="/lovable-uploads/5c067fa4-0b27-4771-884a-a041dfdd3aa0.png"
+                src="/images/college_logo.png"
                 alt="Grace College of Nursing"
                 className="w-14 h-14 object-contain bg-white rounded-xl p-1 shadow-md"
               />
