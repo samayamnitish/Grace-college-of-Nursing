@@ -339,10 +339,10 @@ export default function AdmissionsPage() {
 
           {/* Final Call to Action */}
           <div className="bg-gradient-to-r from-nursing-navy via-[#0d3156] to-nursing-green rounded-3xl p-8 sm:p-12 text-center text-white shadow-2xl space-y-6">
-            <h3 className="text-3xl sm:text-4xl font-white font-heading tracking-tight">
+            <h3 className="text-3xl sm:text-4xl font-black text-white font-heading tracking-tight drop-shadow-sm">
               Ready to Submit Your Application?
             </h3>
-            <p className="text-slate-200 text-sm sm:text-base max-w-2xl mx-auto font-medium leading-relaxed">
+            <p className="text-slate-100 text-sm sm:text-base max-w-2xl mx-auto font-medium leading-relaxed">
               Complete the official B.Sc. Nursing application online. Validate all fields and generate a printable PDF in minutes.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4 pt-2">
