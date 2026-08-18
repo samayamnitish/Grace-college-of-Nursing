@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ChevronLeft, ChevronRight, Quote, MapPin } from "lucide-react";
+import { ChevronLeft, ChevronRight, Quote, MapPin, Star } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
@@ -76,113 +76,120 @@ const Testimonials = () => {
   const current = testimonials[currentTestimonial];
 
   return (
-    <section className="py-16 bg-background">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl lg:text-4xl font-bold text-college-green mb-4">
-            Testimonials
+    <section className="py-14 sm:py-16 bg-background relative overflow-hidden">
+      {/* Background Ambience */}
+      <div className="absolute top-1/2 left-0 w-[400px] h-[400px] bg-college-green/10 blur-[130px] rounded-full -translate-y-1/2 -translate-x-1/2 mix-blend-screen pointer-events-none"></div>
+      <div className="absolute top-1/2 right-0 w-[400px] h-[400px] bg-college-gold/10 blur-[130px] rounded-full -translate-y-1/2 translate-x-1/2 mix-blend-screen pointer-events-none"></div>
+
+      <div className="container mx-auto px-4 sm:px-8 relative z-10">
+        <div className="text-center mb-10">
+          <div className="inline-flex items-center justify-center space-x-1.5 text-college-gold mb-3">
+            <Star className="w-4 h-4 fill-current" />
+            <Star className="w-4 h-4 fill-current" />
+            <Star className="w-4 h-4 fill-current" />
+            <Star className="w-4 h-4 fill-current" />
+            <Star className="w-4 h-4 fill-current" />
+          </div>
+          <h2 className="text-3xl sm:text-4xl font-black text-foreground mb-3 font-heading tracking-tight">
+            Alumni <span className="text-transparent bg-clip-text bg-gradient-to-r from-college-green to-college-gold">Stories</span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            Hear from our successful alumni who are making a difference in the healthcare industry
+          <p className="text-sm sm:text-base text-muted-foreground font-medium max-w-xl mx-auto leading-relaxed">
+            Hear from our visionary alumni who are shaping the future of the healthcare industry, one life at a time.
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto">
-          <Card className="shadow-lg">
-            <CardContent className="p-8 lg:p-12">
-              <div className="relative">
-                {/* Quote Icon */}
-                <Quote className="w-12 h-12 text-college-green/20 absolute -top-2 -left-2" />
-                
-                {/* Testimonial Content */}
-                <div className="relative z-10">
-                  <blockquote className="text-lg lg:text-xl text-foreground leading-relaxed mb-8 italic">
+        <div className="max-w-3xl mx-auto">
+          <div className="relative group">
+            <div className="absolute -inset-1 bg-gradient-to-r from-college-green to-college-gold rounded-3xl blur opacity-20 group-hover:opacity-35 transition-opacity duration-500"></div>
+            <Card className="relative bg-card/75 backdrop-blur-xl border border-border/60 shadow-xl rounded-3xl overflow-hidden">
+              <CardContent className="p-6 sm:p-10 relative">
+                <Quote className="w-14 h-14 text-college-green/10 absolute top-5 left-5 pointer-events-none" />
+
+                <div className="relative z-10 space-y-6">
+                  <blockquote className="text-sm sm:text-base md:text-lg text-foreground leading-relaxed font-medium">
                     "{current.content}"
                   </blockquote>
-                  
-                  {/* Student Details */}
-                  <div className="border-t pt-6">
-                    <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
-                      <div>
-                        <h4 className="text-xl font-bold text-college-green mb-1">
-                          {current.name}
-                        </h4>
-                        <p className="text-muted-foreground text-sm mb-2">
-                          {current.parentage}
-                        </p>
-                        <div className="flex items-center gap-1 text-sm text-muted-foreground mb-2">
-                          <MapPin className="w-4 h-4" />
+
+                  <div className="border-t border-border/60 pt-5 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+                    <div>
+                      <h4 className="text-lg sm:text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-college-green to-college-gold mb-1">
+                        {current.name}
+                      </h4>
+                      <p className="text-muted-foreground font-semibold text-xs mb-3 uppercase tracking-wider">
+                        {current.parentage}
+                      </p>
+
+                      <div className="flex flex-wrap items-center gap-2 text-xs font-medium">
+                        <div className="flex items-center gap-1.5 bg-secondary/80 px-3 py-1.5 rounded-full text-foreground/85 border border-border/50">
+                          <MapPin className="w-3.5 h-3.5 text-college-green" />
                           <span>{current.location}</span>
                         </div>
-                        <div className="flex flex-col sm:flex-row sm:gap-4 text-sm">
-                          <span className="text-college-green font-medium">
-                            Batch: {current.batch}
-                          </span>
-                          <span className="text-muted-foreground">
-                            Currently: {current.currentPosition}
-                          </span>
+                        <div className="bg-college-green/10 text-college-green px-3 py-1.5 rounded-full border border-college-green/20 font-semibold">
+                          Batch: {current.batch}
+                        </div>
+                        <div className="bg-college-gold/10 text-college-gold dark:text-blue-400 px-3 py-1.5 rounded-full border border-college-gold/20 font-semibold">
+                          {current.currentPosition}
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </CardContent>
-          </Card>
+              </CardContent>
+            </Card>
 
-          {/* Navigation */}
-          <div className="flex items-center justify-center gap-4 mt-8">
-            <Button
-              variant="outline"
-              size="icon"
-              onClick={prevTestimonial}
-              className="hover:bg-college-green hover:text-white"
-            >
-              <ChevronLeft className="w-4 h-4" />
-            </Button>
-            
-            <div className="flex items-center gap-2">
-              {testimonials.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentTestimonial(index)}
-                  className={`w-3 h-3 rounded-full transition-all ${
-                    index === currentTestimonial 
-                      ? "bg-college-green" 
-                      : "bg-muted hover:bg-muted/80"
-                  }`}
-                />
-              ))}
+            {/* Navigation Overlays */}
+            <div className="absolute top-1/2 -left-3 sm:-left-5 -translate-y-1/2 z-20">
+              <Button
+                variant="outline"
+                size="icon"
+                onClick={prevTestimonial}
+                className="w-10 h-10 rounded-full bg-background/90 hover:bg-college-green hover:text-white border-border/60 backdrop-blur-md shadow-lg transition-all hover:scale-105"
+              >
+                <ChevronLeft className="w-4 h-4" />
+              </Button>
             </div>
-            
-            <Button
-              variant="outline"
-              size="icon"
-              onClick={nextTestimonial}
-              className="hover:bg-college-green hover:text-white"
-            >
-              <ChevronRight className="w-4 h-4" />
-            </Button>
+            <div className="absolute top-1/2 -right-3 sm:-right-5 -translate-y-1/2 z-20">
+              <Button
+                variant="outline"
+                size="icon"
+                onClick={nextTestimonial}
+                className="w-10 h-10 rounded-full bg-background/90 hover:bg-college-green hover:text-white border-border/60 backdrop-blur-md shadow-lg transition-all hover:scale-105"
+              >
+                <ChevronRight className="w-4 h-4" />
+              </Button>
+            </div>
+          </div>
+
+          <div className="flex items-center justify-center gap-2 mt-8">
+            {testimonials.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentTestimonial(index)}
+                className={`transition-all rounded-full ${index === currentTestimonial
+                    ? "w-6 h-2 bg-college-green shadow-sm"
+                    : "w-2 h-2 bg-border hover:bg-college-green/50"
+                  }`}
+              />
+            ))}
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-12 pt-12 border-t">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-college-green mb-2">21+</div>
-              <div className="text-muted-foreground text-sm">Batches Graduated</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-college-green mb-2">1000+</div>
-              <div className="text-muted-foreground text-sm">Alumni Worldwide</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-college-green mb-2">95%</div>
-              <div className="text-muted-foreground text-sm">Placement Rate</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-college-green mb-2">35+</div>
-              <div className="text-muted-foreground text-sm">Years Experience</div>
-            </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-14 pt-10 border-t border-border/50">
+            {[
+              { value: "21+", label: "Batches Graduated" },
+              { value: "1000+", label: "Alumni Worldwide" },
+              { value: "95%", label: "Placement Rate" },
+              { value: "35+", label: "Years Excellence" }
+            ].map((stat, i) => (
+              <div key={i} className="text-center group">
+                <div className="text-3xl sm:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-br from-college-green to-college-gold mb-1.5 group-hover:scale-105 transition-transform duration-300">
+                  {stat.value}
+                </div>
+                <div className="text-muted-foreground font-semibold text-xs uppercase tracking-wider">
+                  {stat.label}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>

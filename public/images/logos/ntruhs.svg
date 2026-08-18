@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="ntrGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#123B68" />
+      <stop offset="100%" stop-color="#0B6B53" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D59B2C" />
+      <stop offset="100%" stop-color="#F3C358" />
+    </linearGradient>
+  </defs>
+  <!-- Outer circle -->
+  <circle cx="100" cy="100" r="94" fill="#ffffff" stroke="#123B68" stroke-width="6" />
+  <circle cx="100" cy="100" r="86" fill="none" stroke="#D59B2C" stroke-width="2.5" stroke-dasharray="4,2" />
+  <circle cx="100" cy="100" r="80" fill="#f8fafc" stroke="#123B68" stroke-width="2" />
+  
+  <!-- Text paths -->
+  <path id="textCircleTop" d="M 30,100 A 70,70 0 1,1 170,100" fill="none" />
+  <path id="textCircleBottom" d="M 170,100 A 70,70 0 0,1 30,100" fill="none" />
+  
+  <text font-family="Arial, sans-serif" font-size="11" font-weight="900" fill="#123B68" letter-spacing="1.5">
+    <textPath href="#textCircleTop" startOffset="50%" text-anchor="middle">
+      Dr. NTR UNIVERSITY OF HEALTH SCIENCES
+    </textPath>
+  </text>
+  
+  <text font-family="Arial, sans-serif" font-size="10" font-weight="800" fill="#0B6B53" letter-spacing="2">
+    <textPath href="#textCircleBottom" startOffset="50%" text-anchor="middle">
+      VIJAYAWADA • A.P.
+    </textPath>
+  </text>
+
+  <!-- Center Crest -->
+  <circle cx="100" cy="100" r="48" fill="url(#ntrGrad)" stroke="#D59B2C" stroke-width="2" />
+  
+  <!-- Caduceus / Rod of Asclepius & Open Book Emblem -->
+  <!-- Open Book Base -->
+  <path d="M72,122 Q100,114 100,126 Q100,114 128,122 L128,132 Q100,124 100,136 Q100,124 72,132 Z" fill="#ffffff" opacity="0.95" />
+  <path d="M100,116 L100,136" stroke="#123B68" stroke-width="1.5" />
+  
+  <!-- Staff of Asclepius -->
+  <line x1="100" y1="64" x2="100" y2="120" stroke="#D59B2C" stroke-width="3.5" stroke-linecap="round" />
+  <circle cx="100" cy="62" r="4.5" fill="#D59B2C" />
+  
+  <!-- Serpent wrapping staff -->
+  <path d="M93,73 Q108,77 100,85 Q91,92 107,98 Q102,106 94,110" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" />
+  
+  <!-- Sun Rays on top of emblem -->
+  <path d="M100,52 L100,56 M90,55 L93,58 M110,55 L107,58 M83,62 L87,64 M117,62 L113,64" stroke="#D59B2C" stroke-width="2" stroke-linecap="round" />
+</svg>

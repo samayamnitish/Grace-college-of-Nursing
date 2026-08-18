@@ -2,28 +2,32 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Courses from "@/components/Courses";
+import FacilitiesPreview from "@/components/FacilitiesPreview";
 import NewsEvents from "@/components/NewsEvents";
+import Gallery from "@/components/Gallery";
 import Testimonials from "@/components/Testimonials";
 import Admissions from "@/components/Admissions";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
-import FloatingActionButton from "@/components/FloatingActionButton";
+import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 
-const Index = () => {
+export default function Index() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-background text-foreground flex flex-col font-sans">
       <Header />
-      <Hero />
-      <About />
-      <Courses />
-      <NewsEvents />
-      <Testimonials />
-      <Admissions />
-      <Contact />
+      <main className="flex-1">
+        <Hero />
+        <About />
+        <Courses />
+        <FacilitiesPreview />
+        <NewsEvents />
+        <Gallery />
+        <Testimonials />
+        <Admissions />
+        <Contact />
+      </main>
       <Footer />
-      <FloatingActionButton />
+      <FloatingWhatsApp />
     </div>
   );
-};
-
-export default Index;
+}

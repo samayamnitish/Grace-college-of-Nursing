@@ -1,129 +1,159 @@
-import { Award, Users, BookOpen, Heart } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Award, ShieldCheck, Stethoscope, Compass, Sparkles, ArrowRight, Heart, Users, Building2, CheckCircle2 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import founderImage from "@/assets/founder.jpg";
 
-const About = () => {
-  const features = [
+export default function About() {
+  const whyChooseUs = [
     {
-      icon: Award,
-      title: "Recognized Institution",
-      description: "Recognized by Government of A.P, Andhra Pradesh Nursing Council, and Indian Nursing Council"
+      title: "Clinical Hospital Partnership",
+      desc: "Daily hands-on bedside practical training at the Government Teaching General Hospital, Machilipatnam.",
+      icon: Stethoscope,
     },
     {
+      title: "State-of-the-Art Laboratories",
+      desc: "Dedicated Anatomy, Community Health, Nutrition & Dietetics, and Nursing Foundations simulation labs.",
+      icon: Building2,
+    },
+    {
+      title: "Premier Statutory Recognition",
+      desc: "Approved by INC New Delhi, A.P. Nursing Council, Govt. of A.P., and affiliated to Dr. N.T.R. UHS.",
+      icon: ShieldCheck,
+    },
+    {
+      title: "Comfortable Residential Hostel",
+      desc: "Secure campus hostel with a 60-seat hygienic dining hall and an in-house RO mineral water plant.",
       icon: Users,
-      title: "Experienced Faculty",
-      description: "Qualified and experienced faculty providing high quality career oriented educational programs"
     },
-    {
-      icon: BookOpen,
-      title: "Career Guidance",
-      description: "Dedicated career guidance cell to meet the needs of all students"
-    },
-    {
-      icon: Heart,
-      title: "Scholarships Available",
-      description: "Scholarships for deserving candidates are provided to support their education"
-    }
   ];
 
   return (
-    <section id="about" className="py-16 bg-muted/30">
-      <div className="container mx-auto px-4">
-        {/* Main About Section */}
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
-          {/* Left Content */}
-          <div>
-            <h2 className="text-3xl lg:text-4xl font-bold text-college-green mb-6">
-              About Nursing Career
+    <section id="about" className="py-20 bg-secondary/30 relative overflow-hidden font-sans">
+      <div className="container mx-auto px-4 sm:px-8 relative z-10 space-y-16">
+        {/* Main About Intro Grid */}
+        <div className="grid lg:grid-cols-12 gap-10 items-center">
+          <div className="lg:col-span-7 space-y-5 text-left">
+            <div className="inline-flex items-center gap-2 bg-nursing-green/10 text-nursing-green border border-nursing-green/20 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest">
+              <Sparkles className="w-3.5 h-3.5" /> About the Institution
+            </div>
+
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-nursing-navy font-heading tracking-tight leading-[1.15]">
+              Nurturing Passion Into <br className="hidden sm:block" />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-nursing-green to-college-gold">
+                Distinguished Healthcare Leadership
+              </span>
             </h2>
-            <div className="prose max-w-none text-foreground space-y-4">
+
+            <div className="text-muted-foreground text-sm sm:text-base leading-relaxed space-y-4 font-medium">
               <p>
-                It is an important policy to provide good health care by all developing countries. 
-                Thus, it has become more impediments to provide health care to the public in our country. 
-                This may not be possible to the Government to provide health care to the all the people 
-                because of funds, lack of trained workers and assistants in the field of medicine etc.
+                Established under the benevolent aegis of <strong className="text-foreground">Sara Grace Educational Society</strong>, Grace College of Nursing has been a beacon of exemplary paramedical and nursing education in Machilipatnam, Krishna District.
               </p>
               <p>
-                So, private organizations have come forward for providing health care to the people of nation. 
-                The Private sector has started Para Medical Courses, Multipurpose Health Worker training courses, 
-                etc., in keeping the urgency and need of giving health care to the people in remote villages 
-                and to help the poor and needy.
+                Since our founding in 1987, we have graduated thousands of disciplined healthcare officers equipped with clinical precision, ethical integrity, and unwavering empathy for human life.
               </p>
             </div>
-            <Button className="mt-6 bg-college-green hover:bg-college-green/90">
-              Learn More About Our Programs
-            </Button>
+
+            <div className="pt-2 flex flex-wrap gap-3">
+              <Link
+                to="/about"
+                className="inline-flex items-center gap-2 bg-nursing-green hover:bg-nursing-green/90 text-white font-bold px-6 py-3 rounded-xl shadow-md text-xs sm:text-sm transition-all"
+              >
+                Read Institutional History <ArrowRight className="w-4 h-4" />
+              </Link>
+              <Link
+                to="/management"
+                className="inline-flex items-center gap-2 bg-card hover:bg-secondary text-foreground font-bold px-6 py-3 rounded-xl border border-border text-xs sm:text-sm transition-all"
+              >
+                Executive Committee
+              </Link>
+            </div>
           </div>
 
-          {/* Right Content - College Info */}
-          <div className="bg-card p-8 rounded-lg shadow-lg">
-            <h3 className="text-2xl font-bold text-college-green mb-6">
-              NURSING - The Noblest Profession
+          {/* Right Highlights Card */}
+          <div className="lg:col-span-5 bg-card p-8 sm:p-10 rounded-3xl shadow-xl border border-border relative overflow-hidden space-y-4">
+            <div className="w-12 h-12 rounded-2xl bg-nursing-green/10 text-nursing-green flex items-center justify-center">
+              <Award className="w-6 h-6" />
+            </div>
+            <h3 className="text-2xl font-bold text-nursing-navy font-heading">
+              Symbol of Service
             </h3>
-            <div className="text-card-foreground space-y-4">
-              <p>
-                Every one desires to attain optimum health. The level of development of country is 
-                measured in terms of the health of the people. The achievement of the country in 
-                preventing disease and promoting health depends upon the contribution of all members 
-                of the health team, particularly that of Nurses.
-              </p>
-              <p>
-                Life cannot be saved merely by Medicines and Surgery. Nursing is equally important 
-                to save life and to relieve suffering. Nursing is also an art and nurses should be 
-                capable of serving the sick with a compassionate and caring hand.
-              </p>
+            <p className="text-muted-foreground text-sm leading-relaxed font-medium">
+              Nursing is an art requiring a compassionate and caring hand, combining profound service to humanity with high professional achievement. Our graduates serve across leading government general hospitals and premier healthcare networks worldwide.
+            </p>
+            <div className="pt-2 border-t border-border flex items-center justify-between text-xs font-bold text-nursing-green">
+              <span>Dr. N.T.R. UHS Affiliation</span>
+              <span>INC New Delhi</span>
             </div>
           </div>
         </div>
 
-        {/* Features Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-          {features.map((feature, index) => (
-            <Card key={index} className="text-center hover:shadow-lg transition-shadow">
-              <CardContent className="p-6">
-                <div className="bg-college-green/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <feature.icon className="w-8 h-8 text-college-green" />
-                </div>
-                <h3 className="font-semibold text-lg mb-3 text-college-green">
-                  {feature.title}
-                </h3>
-                <p className="text-muted-foreground text-sm">
-                  {feature.description}
-                </p>
-              </CardContent>
-            </Card>
-          ))}
+        {/* Why Choose Grace College of Nursing Grid */}
+        <div className="space-y-8">
+          <div className="text-center max-w-2xl mx-auto">
+            <Badge className="bg-nursing-green/10 text-nursing-green border-nursing-green/20 text-xs font-bold uppercase tracking-widest px-3.5 py-1 rounded-full mb-2">
+              Distinctive Advantages
+            </Badge>
+            <h2 className="text-3xl sm:text-4xl font-black text-nursing-navy font-heading tracking-tight">
+              Why Choose Grace College of Nursing?
+            </h2>
+            <p className="text-muted-foreground text-sm font-medium mt-1">
+              Engineered to transform ambitious students into globally competent nursing professionals.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {whyChooseUs.map((item, idx) => (
+              <Card key={idx} className="bg-card border-border/80 rounded-2xl shadow-md hover:shadow-xl hover:border-nursing-green/40 transition-all">
+                <CardContent className="p-6 space-y-3">
+                  <div className="w-12 h-12 rounded-xl bg-nursing-green/10 text-nursing-green flex items-center justify-center">
+                    <item.icon className="w-6 h-6" />
+                  </div>
+                  <h3 className="font-bold text-lg text-foreground font-heading">
+                    {item.title}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed font-medium">
+                    {item.desc}
+                  </p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
 
-        {/* Founder Section */}
-        <div className="bg-card rounded-lg shadow-lg overflow-hidden">
-          <div className="grid lg:grid-cols-2 gap-0">
-            <div className="p-8 lg:p-12">
-              <h3 className="text-2xl font-bold text-college-green mb-4">
-                Founder's Desk
+        {/* Founder Message Card */}
+        <div className="bg-card rounded-3xl shadow-xl overflow-hidden border border-border max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-12 gap-0 items-center">
+            <div className="md:col-span-7 p-8 sm:p-10 space-y-4">
+              <span className="inline-block bg-nursing-green/10 text-nursing-green px-3.5 py-1 rounded-full text-xs font-bold tracking-widest uppercase border border-nursing-green/20">
+                Founder Message
+              </span>
+              <h3 className="text-2xl sm:text-3xl font-black text-nursing-navy font-heading tracking-tight">
+                Rev. Dr. S.S. John
               </h3>
-              <div className="mb-6">
-                <h4 className="text-xl font-semibold text-foreground">Rev. Dr. S.S. John</h4>
-                <p className="text-muted-foreground">Bishop Apostolic Church</p>
-              </div>
-              <div className="text-card-foreground space-y-4 text-sm leading-relaxed">
+              <p className="text-xs font-bold text-college-gold uppercase tracking-wider -mt-2">
+                Bishop Apostolic Church • Founder, Sara Grace Educational Society
+              </p>
+              <div className="text-muted-foreground text-xs sm:text-sm leading-relaxed font-medium space-y-3">
                 <p>
-                  The Apostolic Church (Pentecostal) under the able spiritual leadership of Rev. Dr. S.S. John, 
-                  Bishop started Grace School of Nursing under the guidance of the Holy Spirit to impart training 
-                  in General nursing and Midwifery course in 1988 to 2009 and since then 21 batches of students 
-                  have gone out from our Institution on completion of training successfully.
+                  "Grace School of Nursing was started in 1987 with the vision to impart elite General Nursing training to youth from socially and economically deprived backgrounds. Upgraded to collegiate status in 2010, our institution stands firm on the principles of compassion, integrity, and clinical excellence."
                 </p>
-                <p className="font-semibold text-college-green">
-                  Now Grace School of Nursing upgradation as a college of Nursing from the academic year 2010-2011.
-                </p>
+              </div>
+              <div className="pt-2">
+                <Link
+                  to="/about"
+                  className="text-xs font-bold text-nursing-green hover:underline inline-flex items-center gap-1.5"
+                >
+                  Learn more about our Founder & Leadership <ArrowRight className="w-3.5 h-3.5" />
+                </Link>
               </div>
             </div>
-            <div className="relative">
-              <img 
-                src={founderImage} 
-                alt="Rev. Dr. S.S. John" 
-                className="w-full h-full object-cover"
+
+            <div className="md:col-span-5 relative h-72 md:h-full min-h-[300px] bg-slate-900">
+              <img
+                src={founderImage}
+                alt="Rev. Dr. S.S. John"
+                className="w-full h-full object-cover object-top filter contrast-105"
               />
             </div>
           </div>
@@ -131,6 +161,4 @@ const About = () => {
       </div>
     </section>
   );
-};
-
-export default About;
+}

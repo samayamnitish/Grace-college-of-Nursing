@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+*.tsbuildinfo
+
+# Raw heavy source assets & submodules
+*.tif
+grace-nursing-hub-43

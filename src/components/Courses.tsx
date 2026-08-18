@@ -1,169 +1,109 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Clock, Users, Award, CheckCircle } from "lucide-react";
+import { Clock, Users, Award, CheckCircle, ArrowRight, BookOpen, Stethoscope, ShieldCheck, Phone, FileText } from "lucide-react";
 
-const Courses = () => {
-  const courses = [
-    {
-      title: "Bachelor of Science in Nursing (B.Sc Nursing)",
-      duration: "4 Years",
-      seats: "60 Students",
-      eligibility: "12th with Physics, Chemistry, Biology",
-      highlights: [
-        "Comprehensive clinical training",
-        "Research methodology",
-        "Community health nursing",
-        "Critical care specialization"
-      ],
-      fee: "₹85,000/year",
-      popular: true
-    },
-    {
-      title: "General Nursing & Midwifery (GNM)",
-      duration: "3.5 Years",
-      seats: "40 Students", 
-      eligibility: "12th with any stream",
-      highlights: [
-        "Foundation in nursing care",
-        "Midwifery training",
-        "Community health programs",
-        "Professional ethics"
-      ],
-      fee: "₹65,000/year",
-      popular: false
-    },
-    {
-      title: "Auxiliary Nurse Midwife (ANM)",
-      duration: "2 Years",
-      seats: "30 Students",
-      eligibility: "10th Pass",
-      highlights: [
-        "Basic nursing skills",
-        "Maternal care",
-        "Child health",
-        "First aid training"
-      ],
-      fee: "₹45,000/year", 
-      popular: false
-    },
-    {
-      title: "Post Basic B.Sc Nursing",
-      duration: "2 Years",
-      seats: "20 Students",
-      eligibility: "GNM with Registration",
-      highlights: [
-        "Advanced nursing concepts",
-        "Leadership development", 
-        "Specialization options",
-        "Research projects"
-      ],
-      fee: "₹75,000/year",
-      popular: false
-    }
-  ];
+export default function Courses() {
+  const courseDetails = {
+    title: "Bachelor of Science in Nursing (B.Sc. Nursing)",
+    degree: "4-Year Full-Time Undergraduate Professional Degree Program",
+    duration: "4 Years (8 Semesters)",
+    seats: "60 Seats",
+    affiliation: "Affiliated to Dr. N.T.R. University of Health Sciences, Vijayawada",
+    eligibility: "Intermediate (10+2) with Physics, Chemistry, Biology (min 45% aggregate) & NEET-UG for Convener Quota.",
+    pillars: [
+      {
+        icon: Stethoscope,
+        title: "Clinical Hospital Simulation",
+        desc: "Rigorous clinical rotation across Government Teaching General Hospital wards.",
+      },
+      {
+        icon: BookOpen,
+        title: "8-Semester Curricula",
+        desc: "Anatomy, pharmacology, adult health, child health & midwifery syllabus.",
+      },
+      {
+        icon: ShieldCheck,
+        title: "Statutory Accreditations",
+        desc: "Recognised by Govt. of A.P., A.P. Nursing Council & INC New Delhi.",
+      },
+    ],
+  };
 
   return (
-    <section id="courses" className="py-20 bg-background">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-college-green mb-6">
-            Our Nursing Programs
+    <section id="courses" className="py-20 bg-background relative overflow-hidden font-sans">
+      {/* Background Decor */}
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-nursing-green/5 blur-[130px] rounded-full pointer-events-none"></div>
+
+      <div className="container mx-auto px-4 sm:px-8 relative z-10 space-y-12">
+        <div className="text-center max-w-2xl mx-auto">
+          <Badge className="bg-nursing-green/10 text-nursing-green border-nursing-green/20 mb-3 px-4 py-1.5 uppercase tracking-widest font-bold rounded-full text-xs">
+            Academic Programs
+          </Badge>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-nursing-navy font-heading tracking-tight">
+            Flagship Degree <span className="text-transparent bg-clip-text bg-gradient-to-r from-nursing-green to-college-gold">Program</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Choose from our comprehensive range of nursing programs designed to meet industry 
-            standards and prepare you for a successful healthcare career.
+          <p className="text-sm sm:text-base text-muted-foreground font-medium mt-2 leading-relaxed">
+            Our 4-Year B.Sc. Nursing program is designed to develop highly skilled clinical leaders prepared to transform patient care and community wellness.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 mb-16">
-          {courses.map((course, index) => (
-            <Card key={index} className={`relative overflow-hidden shadow-card hover:shadow-elegant transition-smooth ${
-              course.popular ? 'border-college-green border-2' : 'border-border'
-            }`}>
-              {course.popular && (
-                <div className="absolute top-0 right-0">
-                  <Badge className="bg-college-gold text-college-navy rounded-tl-none rounded-br-none px-4 py-2">
-                    Most Popular
-                  </Badge>
+        {/* Academic Degree Card */}
+        <div className="max-w-4xl mx-auto">
+          <Card className="bg-card border border-border rounded-3xl shadow-xl overflow-hidden">
+            <div className="p-8 sm:p-10 md:p-12">
+              <div className="flex flex-wrap items-center justify-between gap-4 mb-6">
+                <Badge className="bg-college-gold text-black font-extrabold px-4 py-1.5 rounded-full text-xs uppercase tracking-wider">
+                  Top Flagship Program
+                </Badge>
+                <div className="flex items-center gap-4 text-xs font-bold text-muted-foreground">
+                  <span className="flex items-center gap-1"><Clock className="w-4 h-4 text-nursing-green" /> {courseDetails.duration}</span>
+                  <span className="flex items-center gap-1"><Users className="w-4 h-4 text-nursing-green" /> {courseDetails.seats}</span>
                 </div>
-              )}
-              
-              <CardHeader className="pb-4">
-                <CardTitle className="text-2xl text-college-navy mb-4">
-                  {course.title}
-                </CardTitle>
-                
-                <div className="flex flex-wrap gap-4 text-sm">
-                  <div className="flex items-center gap-2 text-gray-600">
-                    <Clock className="w-4 h-4" />
-                    {course.duration}
-                  </div>
-                  <div className="flex items-center gap-2 text-gray-600">
-                    <Users className="w-4 h-4" />
-                    {course.seats}
-                  </div>
-                  <div className="flex items-center gap-2 text-gray-600">
-                    <Award className="w-4 h-4" />
-                    {course.eligibility}
-                  </div>
-                </div>
-              </CardHeader>
+              </div>
 
-              <CardContent>
-                <div className="mb-6">
-                  <h4 className="font-semibold text-college-navy mb-3">Course Highlights:</h4>
-                  <ul className="space-y-2">
-                    {course.highlights.map((highlight, idx) => (
-                      <li key={idx} className="flex items-center gap-2 text-gray-600">
-                        <CheckCircle className="w-4 h-4 text-college-green flex-shrink-0" />
-                        {highlight}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-black text-nursing-navy font-heading mb-2 tracking-tight">
+                {courseDetails.title}
+              </h3>
+              <p className="text-nursing-green font-bold text-sm mb-6">
+                {courseDetails.affiliation}
+              </p>
 
-                <div className="flex items-center justify-between mb-6">
-                  <div>
-                    <span className="text-2xl font-bold text-college-green">{course.fee}</span>
-                    <span className="text-gray-600 ml-1">+ One-time fees</span>
+              {/* Requirement Box */}
+              <div className="bg-secondary/60 p-5 rounded-2xl border border-border mb-8 text-sm">
+                <span className="font-bold text-nursing-navy block mb-1">Eligibility Criteria:</span>
+                <p className="text-muted-foreground font-medium text-xs sm:text-sm">{courseDetails.eligibility}</p>
+              </div>
+
+              {/* Pillars Grid */}
+              <div className="grid sm:grid-cols-3 gap-5 mb-8">
+                {courseDetails.pillars.map((pillar, idx) => (
+                  <div key={idx} className="p-5 rounded-2xl bg-secondary/30 border border-border hover:border-nursing-green/40 transition-colors">
+                    <pillar.icon className="w-7 h-7 text-nursing-green mb-3" />
+                    <h4 className="font-bold text-foreground text-sm mb-1 font-heading">{pillar.title}</h4>
+                    <p className="text-xs text-muted-foreground font-medium leading-relaxed">{pillar.desc}</p>
                   </div>
-                </div>
+                ))}
+              </div>
 
-                <div className="flex gap-3">
-                  <Button variant="college" className="flex-1">
-                    Apply Now
-                  </Button>
-                  <Button variant="outline" className="flex-1">
-                    Download Syllabus
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-
-        {/* Additional Information */}
-        <div className="bg-college-green-light rounded-2xl p-8 text-center">
-          <h3 className="text-2xl font-bold text-college-navy mb-4">
-            Need Help Choosing the Right Course?
-          </h3>
-          <p className="text-gray-700 mb-6 max-w-2xl mx-auto">
-            Our academic counselors are here to guide you through the admission process 
-            and help you choose the program that best fits your career goals.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="college" size="lg">
-              Schedule Counseling
-            </Button>
-            <Button variant="outline" size="lg">
-              Download Admission Guide
-            </Button>
-          </div>
+              <div className="flex flex-col sm:flex-row gap-3.5 pt-6 border-t border-border">
+                <Link
+                  to="/apply"
+                  className="flex-1 bg-nursing-green hover:bg-nursing-green/90 text-white font-bold py-3.5 rounded-xl shadow-md text-center text-sm transition-all flex items-center justify-center gap-2"
+                >
+                  <FileText className="w-4 h-4" /> Apply for 2026 Batch
+                </Link>
+                <Link
+                  to="/academics"
+                  className="flex-1 bg-card hover:bg-secondary text-nursing-navy font-bold py-3.5 rounded-xl border border-border text-center text-sm transition-all flex items-center justify-center gap-2"
+                >
+                  <BookOpen className="w-4 h-4 text-college-gold" /> View 8-Semester Syllabus
+                </Link>
+              </div>
+            </div>
+          </Card>
         </div>
       </div>
     </section>
   );
-};
-
-export default Courses;
+}

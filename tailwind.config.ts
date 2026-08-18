@@ -18,9 +18,14 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				sans: ['Inter', 'sans-serif'],
+				heading: ['Poppins', 'sans-serif'],
+			},
 			backgroundImage: {
 				'gradient-hero': 'var(--gradient-hero)',
-				'gradient-card': 'var(--gradient-card)'
+				'gradient-card': 'var(--gradient-card)',
+				'gradient-teal': 'var(--gradient-teal)',
 			},
 			boxShadow: {
 				'elegant': 'var(--shadow-elegant)',
@@ -69,16 +74,13 @@ export default {
 					gold: 'hsl(var(--college-gold))',
 					navy: 'hsl(var(--college-navy))'
 				},
-				sidebar: {
-					DEFAULT: 'hsl(var(--sidebar-background))',
-					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
-				}
+				nursing: {
+					green: '#0B6B53',
+					teal: '#15936F',
+					navy: '#123B68',
+					gold: '#D59B2C',
+					bg: '#F7F9FC',
+				},
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
