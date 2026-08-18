@@ -3,15 +3,16 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import BreadcrumbNav from "@/components/BreadcrumbNav";
-import { CheckCircle, ArrowRight, ShieldCheck, Camera, BookOpen, Monitor, Baby, Heart, Stethoscope, Users, Building2 } from "lucide-react";
+import { CheckCircle, ArrowRight, ShieldCheck, Camera, BookOpen, Monitor, Baby, Heart, Stethoscope, Users, Building2, Utensils } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
 export default function FacilitiesPage() {
   const labFacilities = [
     {
       title: "Fundamental Nursing Laboratory",
-      image: "/images/lab_training_1.jpg",
+      icon: Stethoscope,
       badge: "Clinical Simulation",
+      color: "bg-blue-500/10 text-blue-600 border-blue-500/20",
       description: "Provides opportunities for students to learn and practice essential nursing procedures, patient hygiene, bed making, sterile technique, and clinical vital sign monitoring before entering active clinical hospital postings.",
       features: [
         "Clinical simulation patient care stations",
@@ -22,8 +23,9 @@ export default function FacilitiesPage() {
     },
     {
       title: "Midwifery & Child Health Laboratory",
-      image: "/images/lab_training_2.jpg",
+      icon: Baby,
       badge: "Maternal & Pediatric Care",
+      color: "bg-pink-500/10 text-pink-600 border-pink-500/20",
       description: "Supports practical learning related to midwifery, maternal care, labor delivery simulations, neonatal resuscitation, and child health nursing.",
       features: [
         "Maternal delivery & birthing simulation models",
@@ -34,8 +36,9 @@ export default function FacilitiesPage() {
     },
     {
       title: "Community Health Nursing Laboratory",
-      image: "/images/community_lab.png",
+      icon: Users,
       badge: "Public Health",
+      color: "bg-emerald-500/10 text-emerald-600 border-emerald-500/20",
       description: "Supports community-health activities, field health projects, rural health camps, public health exhibitions, and mass-awareness disease prevention campaigns.",
       features: [
         "Fully equipped Community Health Nursing bags",
@@ -46,8 +49,9 @@ export default function FacilitiesPage() {
     },
     {
       title: "Anatomy & Physiology Laboratory",
-      image: "/images/anatomy_lab.png",
+      icon: Heart,
       badge: "Biological Sciences",
+      color: "bg-rose-500/10 text-rose-600 border-rose-500/20",
       description: "Provides specimens, articulated human skeletal models, and 3D organ displays to support hands-on learning of human anatomy and physiological bodily systems.",
       features: [
         "Full-size human skeletal & organ models",
@@ -58,8 +62,9 @@ export default function FacilitiesPage() {
     },
     {
       title: "Nutrition Laboratory",
-      image: "/images/nutrition_lab.png",
+      icon: Utensils,
       badge: "Therapeutic Diets",
+      color: "bg-amber-500/10 text-amber-600 border-amber-500/20",
       description: "Supports practical learning related to nutrition, dietary calculations, and its vital importance in clinical healthcare and recovery.",
       features: [
         "Modular food preparation and cooking stations",
@@ -70,8 +75,9 @@ export default function FacilitiesPage() {
     },
     {
       title: "Computer Laboratory",
-      image: "/images/library_facility.png",
+      icon: Monitor,
       badge: "Digital Resources",
+      color: "bg-indigo-500/10 text-indigo-600 border-indigo-500/20",
       description: "Provides students with access to high-speed computers, internet connectivity, and digital health informatics learning resources.",
       features: [
         "High-speed networked computer terminals",
@@ -168,48 +174,47 @@ export default function FacilitiesPage() {
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {labFacilities.map((lab, idx) => (
-                <div
-                  key={idx}
-                  className="bg-card border border-border rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all flex flex-col justify-between"
-                >
-                  <div>
-                    <div className="relative aspect-[16/10] w-full overflow-hidden bg-slate-100">
-                      <img
-                        src={lab.image}
-                        alt={lab.title}
-                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                      />
-                      <div className="absolute top-4 left-4">
-                        <Badge className="bg-white/95 backdrop-blur-md text-nursing-navy font-bold text-xs px-3 py-1 shadow">
+              {labFacilities.map((lab, idx) => {
+                const IconComponent = lab.icon;
+                return (
+                  <div
+                    key={idx}
+                    className="bg-card border border-border rounded-3xl p-7 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between"
+                  >
+                    <div className="space-y-4">
+                      <div className="flex items-center justify-between gap-3">
+                        <div className={`w-13 h-13 rounded-2xl flex items-center justify-center p-3 border ${lab.color}`}>
+                          <IconComponent className="w-6 h-6" />
+                        </div>
+                        <Badge className="bg-secondary text-foreground font-bold text-[11px] px-3 py-1 border border-border/60">
                           {lab.badge}
                         </Badge>
                       </div>
-                    </div>
 
-                    <div className="p-6 space-y-3">
-                      <h3 className="text-xl font-bold text-nursing-navy font-heading">
-                        {lab.title}
-                      </h3>
-                      <p className="text-muted-foreground text-xs leading-relaxed font-medium">
-                        {lab.description}
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="p-6 pt-0 space-y-2">
-                    <div className="text-[11px] font-bold text-foreground uppercase tracking-wider mb-2 border-t border-border pt-3">
-                      Key Highlights:
-                    </div>
-                    {lab.features.map((ft, fIdx) => (
-                      <div key={fIdx} className="flex items-center gap-2 text-xs font-medium text-foreground/80">
-                        <CheckCircle className="w-3.5 h-3.5 text-nursing-green shrink-0" />
-                        <span>{ft}</span>
+                      <div className="space-y-2">
+                        <h3 className="text-xl font-bold text-nursing-navy dark:text-foreground font-heading">
+                          {lab.title}
+                        </h3>
+                        <p className="text-muted-foreground text-xs leading-relaxed font-medium">
+                          {lab.description}
+                        </p>
                       </div>
-                    ))}
+                    </div>
+
+                    <div className="space-y-2.5 pt-5 mt-5 border-t border-border">
+                      <div className="text-[10px] font-extrabold text-foreground uppercase tracking-widest">
+                        Key Highlights:
+                      </div>
+                      {lab.features.map((ft, fIdx) => (
+                        <div key={fIdx} className="flex items-center gap-2 text-xs font-medium text-foreground/85">
+                          <CheckCircle className="w-3.5 h-3.5 text-nursing-green shrink-0" />
+                          <span>{ft}</span>
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </section>
 
