@@ -56,7 +56,7 @@ const committeeMembers: Member[] = [
   {
     sl: 5,
     name: "Vulli Joyce",
-    relation: "W/o. Nagi Nayudu",
+    relation: "W/o. Nagaiah Naidu",
     designation: "Treasurer",
     badgeColor: "bg-college-gold/20 text-yellow-950 font-bold border border-college-gold/40",
     address: "Door No: 74-9-7/1, 1st Cross Road, Patamata, Vijayawada, Krishna District - 520007",
